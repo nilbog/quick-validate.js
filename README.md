@@ -14,10 +14,7 @@ Therefore, if your markup has:
 <input type='password' name='user_password'/>
 <input type='tel' name='user_telephone'/>
 ```
-Then calling:
-`$('body').validate()`
-
-Is the same as:
+Calling `$('body').validate()` is the same as:
 ```
 $('body').validate({
 	user_email: {},
@@ -25,3 +22,11 @@ $('body').validate({
 	user_telephone: {},
 })
 ```
+
+But if you only want certain inputs to have the validations, you must specify in the call
+```
+$('body').validate({
+	user_email:{},
+})
+```
+
