@@ -68,4 +68,4 @@ $('body').validate({
 
 ## Other Information
 + The plugin will *always* add either an 'is-valid' or 'is-invalid' class to the input
-..+ The class name can be modified via the `c.valid_class` and `c.invalid_class` variables in the JS
+  + The class name can be modified via the `c.valid_class` and `c.invalid_class` variables in the JS
