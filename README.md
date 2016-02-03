@@ -78,3 +78,13 @@ $('body').validate({
 	}
 }
 ```
+
+#### Plans for future
++ Add more additional options
+  + **maxNum** *(max character length or number value)*
+  + **badChar** *(unwanted characters in the input)*
++ Stop form from submitting until all validations pass
+  + *Chrome/Firefox have the built-in validations that prevent form submission, but this would allow other browsers as well*
+
+## Support
+I have only tested in Chrome so far, I plan to do more testing once I get some of the features more fleshed out 
