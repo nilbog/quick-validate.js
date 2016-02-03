@@ -1,26 +1,5 @@
-/*
-takes an array of objects in the form of:
-{
-	name_of_input: {
-		// options
-		minLength:  number   OPTIONAL,
-		setRequired: boolean   OPTIONAL - SETS THE INPUT TO 'REQUIRED'
-	},
-}
-
-minNum  =  for number inputs, this indicates what the value must be greater than. Defaults to 0
-				-> looks for - number > minNum = true
-
-minChar = for text inputs, indicates the minimum number of characters
-maxChar = maximum number of characters
-setRequired = manually set an input to 'required'
-
-onInvalid = takes a custom function -- what happens client-side when the input is invalid
-onValid = takes a custom function -- what happens client-side upon valid entry
-
-*/
 (function($) {
-	$.fn.validate = function(inputs){
+	$.fn.quick_validate = function(inputs){
 		var c={},
 			h={},
 			m={},
@@ -50,13 +29,12 @@ onValid = takes a custom function -- what happens client-side upon valid entry
     			message = message || '';
     		$('#'+type+'-message').remove();
 			if(to_validate[el.attr('name')]['onInvalid']){
-				el.removeClass(c.valid_class);
 				to_validate[el.attr('name')]['onInvalid'](el);
 			}
 			else{
-    			el.removeClass(c.valid_class).addClass(c.invalid_class);
     			el.after('<div id="'+type+'-message" class="error-msg">'+ message + '</div>');
 			}
+			el.removeClass(c.valid_class).addClass(c.invalid_class);
     		to_validate[el.attr('name')]['valid']=false;
     	}
     	h.show_valid=function(el){
@@ -65,6 +43,7 @@ onValid = takes a custom function -- what happens client-side upon valid entry
     		if(to_validate[el.attr('name')]['onValid']){
     			to_validate[el.attr('name')]['onValid'](el);
     		}
+    		else{}
     		el.removeClass(c.invalid_class).addClass(c.valid_class);
     		to_validate[el.attr('name')]['valid']=true;
     	}
@@ -137,28 +116,3 @@ onValid = takes a custom function -- what happens client-side upon valid entry
 		m.init();	
 	}
 }(jQuery));
-
-$('body').validate({
-		number_field:{
-			minNum: 2,
-			onValid: function(el){
-				alert('Custom onValid triggered, wooooh!');
-			}
-		},
-		email:{
-			setRequired: true,
-			onInvalid: function(el){
-				$('.custom-err').remove();
-				el.after('<div class="custom-err">Custom onInvalid() triggered</div>');
-				el.addClass('is-invalid');
-			},
-			onValid: function(el){
-				$('.custom-err').remove();
-				el.after('<div class="custom-err">Custom onValid() triggered YAY!</div>');
-			}
-		},
-		user_phone: {
-			minNum: 7,
-		},
-		user_pass: {},
-	});
