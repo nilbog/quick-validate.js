@@ -23,9 +23,9 @@ Therefore, if your markup has:
 <input type='password' name='user_password'/>
 <input type='tel' name='user_telephone'/>
 ```
-Calling `$('body').validate()` is the same as:
+Calling `$('body').quick_validate()` is the same as:
 ```
-$('body').validate({
+$('body').quick_validate({
 	user_email: {},
 	user_password: {},
 	user_telephone: {},
@@ -34,7 +34,7 @@ $('body').validate({
 
 But if you only want certain inputs to have the validations, you must specify in the call. It will only perform the validations on the inputs passed in.
 ```
-$('body').validate({
+$('body').quick_validate({
 	user_email:{},
 })
 ```
@@ -52,7 +52,7 @@ Key | Value | Purpose
 
 #### How to Use Them
 ```
-$('body').validate({
+$('body').quick_validate({
 	user_email:{
 		setRequired: true
 	},
