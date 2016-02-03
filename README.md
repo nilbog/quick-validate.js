@@ -69,4 +69,11 @@ $('body').validate({
 ## Other Information
 + The plugin will *always* add either an 'is-valid' or 'is-invalid' class to the input even if you've passed a custom onInvalid or onValid function
   + The class name can be modified via the `c.valid_class` and `c.invalid_class` variables in the JS
-  + If you do not want this, simply move `el.removeClass(c.invalid_class).addClass(c.valid_class);` and `el.removeClass(c.valid_class).addClass(c.invalid_class);` into their respective `else` statements
+  + If you do not want this to happen, simply move `el.removeClass(c.invalid_class).addClass(c.valid_class);` and `el.removeClass(c.valid_class).addClass(c.invalid_class);` into their respective `else` statements
++ When an input is deemed valid or invalid, it creates a key/value for that input in the master `to_validate` object ```
+{
+	input_name : {
+		valid: true/false
+	}
+}
+```
