@@ -37,4 +37,7 @@ $('body').validate({
 ##### What Are They?
 KEY | VALUE TYPE | PURPOSE
 --- | --- | --- |
-minNum | Number | Minimum number value (if number input) / Minimum character length (if text-based input)
+**minNum** | Number | Minimum number value (if number input) / Minimum character length (if text-based input)
+**setRequired** | Boolean | Indicates whether to set a field as required
+**onInvalid | Function | Overrides default function performed when input is invalid
+**onValid | Function | Overrides default function performed when input is valid
