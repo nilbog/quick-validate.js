@@ -23,10 +23,17 @@ $('body').validate({
 })
 ```
 
-But if you only want certain inputs to have the validations, you must specify in the call
+But if you only want certain inputs to have the validations, you must specify in the call. It will only perform the validations on the inputs passed in.
 ```
 $('body').validate({
 	user_email:{},
 })
 ```
 
+### Additional Options
+*In addition to the default validations (proper email formatting, etc), there are some key/values you can add to each input name key to add further validations*
+
+##### What Are They?
+KEY | VALUE TYPE | PURPOSE
+--- | --- | --- |
+minNum | Number | Minimum number value (if number input) / Minimum character length (if text-based input)
