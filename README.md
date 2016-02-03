@@ -4,8 +4,8 @@
 **_Quick-Validate.js_** is a jQuery-based lightweight client-side validation plugin used for giving basic real-time feedback to user inputs.
 
 Using input `name` attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.
-
-#### Default Validations<a name='defaults'></a>
+<a name='defaults'></a>
+#### Default Validations
 Input Type | Checks For
 --- | --- |
 email | Proper email format `(/.+@.\..+/gi)`|
@@ -40,7 +40,7 @@ $('body').validate({
 ```
 
 ### Additional Options
-In addition to the [default validations](#defaults) (proper email formatting, etc), there are some key/values you can add to each input name key to add further validations or actions. *(More To Come Soon)*
+In addition to the [default validations](#defaults), there are some key/values you can add to each input name key to add further validations or actions. *(More To Come Soon)*
 
 ##### What Are They?
 Key | Value | Purpose
