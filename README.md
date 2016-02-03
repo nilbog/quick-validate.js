@@ -5,7 +5,8 @@
 
 Using input *name* attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.
 
-### Usage
+## Usage
+### Basic Usage
 When the plugin is called without any parameters, it automatically pulls in all of the inputs from the form and runs the default validations.
 
 Therefore, if your markup has:
