@@ -3,8 +3,8 @@
 ### Description
 **_Quick-Validate.js_** is a jQuery-based lightweight client-side validation plugin used for giving basic real-time feedback to user inputs.
 
-Using input `name` attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.
-<a name='defaults'></a>
+Using input `name` attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.<a name='defaults'></a>
+
 #### Default Validations
 Input Type | Checks For
 --- | --- |
