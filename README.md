@@ -5,6 +5,10 @@
 
 Using input *name* attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.
 
+### Default Validations
+INPUT TYPE | VALIDATIONS
+--- | --- |
+
 ## Usage
 ### Basic Usage
 When the plugin is called without any parameters, it automatically pulls in all of the inputs from the form and runs the default validations.
@@ -39,5 +43,5 @@ KEY | VALUE TYPE | PURPOSE
 --- | --- | --- |
 **minNum** | Number | Minimum number value (if number input) / Minimum character length (if text-based input)
 **setRequired** | Boolean | Indicates whether to set a field as required
-**onInvalid | Function | Overrides default function performed when input is invalid
-**onValid | Function | Overrides default function performed when input is valid
+**onInvalid** | Function | Overrides default function performed when input is invalid
+**onValid** | Function | Overrides default function performed when input is valid
