@@ -40,12 +40,32 @@ $('body').validate({
 ```
 
 ### Additional Options
-*In addition to the default validations (proper email formatting, etc), there are some key/values you can add to each input name key to add further validations*
+In addition to the default validations (proper email formatting, etc), there are some key/values you can add to each input name key to add further validations or actions. *(More To Come Soon)*
 
 ##### What Are They?
-KEY | VALUE TYPE | PURPOSE
+Key | Value | Purpose
 --- | --- | --- |
 **minNum** | Number | Minimum number value (if number input) / Minimum character length (if text-based input)
-**setRequired** | Boolean | Indicates whether to set a field as required
+**setRequired** | Boolean | Indicates whether to set a field as required *if it does not already have required specified*
 **onInvalid** | Function | Overrides default function performed when input is invalid
 **onValid** | Function | Overrides default function performed when input is valid
+
+#### How to Use Them
+```
+$('body').validate({
+	user_email:{
+		setRequired: true
+	},
+	user_password:{
+		minNum: 7,
+		onValid: function(){
+			alert('yay!');
+		}
+	},
+	user_tel: {},
+})
+```
+
+## Other Information
++ The plugin will *always* add either an 'is-valid' or 'is-invalid' class to the input
+..+ The class name can be modified via the `c.valid_class` and `c.invalid_class` variables in the JS
