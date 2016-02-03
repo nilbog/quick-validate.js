@@ -5,9 +5,13 @@
 
 Using input *name* attributes as keys in a JSON-esque block, inputs get passed into the plugin to create real-time validations.
 
-### Default Validations
-INPUT TYPE | VALIDATIONS
+#### Default Validations
+Input Type | Checks For
 --- | --- |
+email | Proper email format `(/.+@.\..+/gi)`|
+password | Does not contain `<` or `>` characters
+tel | Only contains numbers and `-` symbols
+number | Only contains numbers
 
 ## Usage
 ### Basic Usage
